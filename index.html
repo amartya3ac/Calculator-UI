@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+
+    <div class="calculator bg-gray-800 p-6 rounded-xl shadow-lg w-80">
+        
+        <input type="text" class="display w-full h-16 text-right text-3xl p-3 bg-gray-900 text-white rounded-md mb-4" id="display" disabled>
+        <div class="buttons grid grid-cols-4 gap-3">
+            
+            <button class="clear bg-red-500 text-white rounded-lg p-4" onclick="clearDisplay()">C</button>
+            <button class="bg-gray-700 text-white rounded-lg p-4" onclick="appendToDisplay('7')">7</button>
+            <button class="bg-gray-700 text-white rounded-lg p-4" onclick="appendToDisplay('8')">8</button>
+            <button class="bg-gray-700 text-white rounded-lg p-4" onclick="appendToDisplay('9')">9</button>
+            <button class="operator bg-yellow-500 text-white rounded-lg p-4" onclick="appendToDisplay('+')">+</button>
+            <button class="bg-gray-700 text-white rounded-lg p-4" onclick="appendToDisplay('4')">4</button>
+            <button class="bg-gray-700 text-white rounded-lg p-4" onclick="appendToDisplay('5')">5</button>
+            <button class="bg-gray-700 text-white rounded-lg p-4" onclick="appendToDisplay('6')">6</button>
+            <button class="operator bg-yellow-500 text-white rounded-lg p-4" onclick="appendToDisplay('-')">-</button>
+            <button class="bg-gray-700 text-white rounded-lg p-4" onclick="appendToDisplay('1')">1</button>
+            <button class="bg-gray-700 text-white rounded-lg p-4" onclick="appendToDisplay('2')">2</button>
+            <button class="bg-gray-700 text-white rounded-lg p-4" onclick="appendToDisplay('3')">3</button>
+            <button class="operator bg-yellow-500 text-white rounded-lg p-4" onclick="appendToDisplay('*')">×</button>
+            <button class="bg-gray-700 text-white rounded-lg p-4" onclick="appendToDisplay('0')">0</button>
+            <button class="bg-gray-700 text-white rounded-lg p-4" onclick="appendToDisplay('.')">.</button>
+            <button class="equal bg-green-500 text-white rounded-lg p-4" onclick="calculate()">=</button>
+            <button class="operator bg-yellow-500 text-white rounded-lg p-4" onclick="appendToDisplay('/')">÷</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
